@@ -1,24 +1,35 @@
 public class AppPuzzle {
     public static void main(String[] args) {
 
-        Puzzle puzzle = new Puzzle();
-        puzzle.data[0] = 4;
-        puzzle.data[1] = 0;
-        puzzle.data[2] = 3;
-        puzzle.data[3] = 2;
-        puzzle.data[4] = 5;
-        puzzle.data[5] = 6;
-        puzzle.data[6] = 8;
-        puzzle.data[7] = 1;
-        puzzle.data[8] = 7;
-        System.out.println(puzzle);
+        Puzzle start = new Puzzle();
+        start.data[0] = 4;
+        start.data[1] = 0;
+        start.data[2] = 3;
+        start.data[3] = 2;
+        start.data[4] = 5;
+        start.data[5] = 6;
+        start.data[6] = 8;
+        start.data[7] = 1;
+        start.data[8] = 7;
+        System.out.println(start);
 
-        Puzzle[] puzzles = puzzle.next();
+        Puzzle finish = new Puzzle();
+        finish.data[0] = 1;
+        finish.data[1] = 2;
+        finish.data[2] = 3;
+        finish.data[3] = 4;
+        finish.data[4] = 5;
+        finish.data[5] = 6;
+        finish.data[6] = 7;
+        finish.data[7] = 8;
+        finish.data[8] = 0;
 
-        for (int i = 0; i < puzzles.length; i++) {
-            System.out.println(puzzles[i]);
-        }
+        cariSolusi(start, finish);
 
+    }
+
+    public static void cariSolusi(Puzzle start, Puzzle finish) {
+        // 1. Masukkan start ke antrianCek
 
     }
 }
