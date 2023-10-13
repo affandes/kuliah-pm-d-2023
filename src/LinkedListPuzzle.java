@@ -5,11 +5,15 @@ public class LinkedListPuzzle {
         ListPuzzle baru = new ListPuzzle();
         baru.data = data;
 
-        ListPuzzle cek = head;
-        while (cek.next != null) {
-            cek = cek.next;
+        if (head == null) {
+            head = baru;
+        } else {
+            ListPuzzle cek = head;
+            while (cek.next != null) {
+                cek = cek.next;
+            }
+            cek.next = baru;
         }
-        cek.next = baru;
     }
 
     public Puzzle removeFront() {
@@ -19,6 +23,21 @@ public class LinkedListPuzzle {
             return ret.data;
         } else {
             return null;
+        }
+    }
+
+    public boolean exist(Puzzle data) {
+        if (head == null) {
+            return false;
+        } else {
+            ListPuzzle cek = head;
+            while (cek != null) {
+                if (cek.data.equals(data)) {
+                    return true;
+                }
+                cek = cek.next;
+            }
+            return false;
         }
     }
 }

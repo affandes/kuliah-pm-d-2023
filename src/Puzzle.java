@@ -9,6 +9,15 @@ public class Puzzle {
         return hasil;
     }
 
+    public boolean isSama(Puzzle yangDicek) {
+        for (int i = 0; i < data.length; i++) {
+            if (data[i] != yangDicek.data[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public int cariIndexKosong() {
         for (int i = 0; i < data.length; i++) {
             if (data[i] == 0) return i;
