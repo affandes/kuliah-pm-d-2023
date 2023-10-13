@@ -1,8 +1,8 @@
 public class LinkedListPuzzle {
     public ListPuzzle head;
 
-    public void insetBack(Puzzle data) {
-
+    public void insertBack(Puzzle data) {
+        // Untuk menambahkan code  insertBack
     }
 
     public Puzzle removeFront() {
