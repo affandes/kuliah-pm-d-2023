@@ -2,15 +2,15 @@ public class AppPuzzle {
     public static void main(String[] args) {
 
         Puzzle start = new Puzzle();
-        start.data[0] = 1;
-        start.data[1] = 2;
-        start.data[2] = 3;
-        start.data[3] = 0;
-        start.data[4] = 4;
-        start.data[5] = 5;
-        start.data[6] = 7;
-        start.data[7] = 8;
-        start.data[8] = 6;
+        start.data[0] = 8;
+        start.data[1] = 0;
+        start.data[2] = 1;
+        start.data[3] = 2;
+        start.data[4] = 3;
+        start.data[5] = 4;
+        start.data[6] = 5;
+        start.data[7] = 6;
+        start.data[8] = 7;
         System.out.println(start);
 
         Puzzle finish = new Puzzle();

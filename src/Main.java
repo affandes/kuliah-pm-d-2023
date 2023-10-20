@@ -1,3 +1,7 @@
+import java.util.PriorityQueue;
+import java.util.Queue;
+import java.util.Stack;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -43,6 +47,9 @@ public class Main {
             System.out.println("===================");
         }
 
+        Stack<Integer> stack = new Stack<>();
+        stack.push(25);
+        System.out.println(stack.pop());
 
     }
 }
