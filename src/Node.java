@@ -1,23 +1,27 @@
+import java.util.Stack;
+
 public class Node {
     public int value;
     public Node[] children;
 
-    public boolean cari(int value){
-        if (value == this.value){
-            System.out.println(this.value);
-            return true;
-        }else {
+    public Stack<Integer> cari(int value){
+        if (this.value == value) {
+            Stack<Integer> stack = new Stack<>();
+            stack.push(this.value);
+            return stack;
+        } else {
             if (children != null){
                 for (int i = 0; i < children.length; i++) {
                     if (children[i] != null){
-                        if (children[i].cari(value)) {
-                            System.out.println(this.value);
-                            return true;
+                        Stack<Integer> stack = children[i].cari(value);
+                        if (stack != null) {
+                            stack.push(this.value);
+                            return stack;
                         }
                     }
                 }
             }
-            return false;
+            return null;
         }
     }
 }
